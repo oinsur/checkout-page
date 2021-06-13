@@ -6,7 +6,7 @@
   <meta name="description" content="Omar's sixth project on devchallenge.io">
   <meta name="keywords" content="html, css, flex, bem, responsive, form, material icons">
   <meta name="author" content="Omar Insurriaga">
-  <title>Gallery page</title>
+  <title>Checkout page</title>
   <link rel="stylesheet" href="./styles.css">
   <!--Google material icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -44,7 +44,7 @@
           <i class="material-icons shipping-info__icon" id="name-icon">account_circle</i>
           <!--address input-->
           <label for="address" class="shipping-info__sub-heading">Address</label>
-          <input type="text" class="shipping-info__text" placeholder="Your address...">
+          <input type="text" class="shipping-info__text address" placeholder="Your address...">
           <i class="material-icons shipping-info__icon" id="address-icon">location_city</i>
         </section>
         <section class="country-info">
@@ -75,25 +75,29 @@
             <li>
               <h2 class="items__item-name">Vintage Backbag</h2>
               <h2 class="items__item-price">$54.99 <span>$94.99</span></h2>
-              <input type="number" class="items__item-number" placeholder="1">
-              <!--icons for increasing and decreasing the number of items ordered
-              *note: these will not work in this project as they requires logic-->
-              <i class="material-icons item-number__icon" id="minus-icon">indeterminate_check_box</i>
-              <i class="material-icons item-number__icon" id="plus-icon">add_box</i>
+              <!--container to increase the number of items with icons working as buttons and a number that will
+              increase, but never go below 0. This will be controlled by JavaScript-->
+              <section class="items__item-count">
+                <i class="material-icons item-number__icon" id="minus-icon">minimize</i>
+                <h2 class="items__item-number"></h2>
+                <i class="material-icons item-number__icon" id="plus-icon">add</i>
+              </section>
+              </li>
             </li>
-          </li>
-          <!--second item-->
-          <li>
-            <img src="./photo2.png" alt="bag" class="items__item-pic">
+            <!--second item-->
             <li>
-              <h2 class="items__item-name">Levi Shoes</h2>
-              <h2 class="items__item-price">$74.99 <span>$124.99</span></h2>
-              <input type="number" class="items__item-number" placeholder="1">
-              <!--icons for increasing and decreasing the number of items ordered
-              *note: these will not work in this project as they requires logic-->
-              <i class="material-icons item-number__icon" id="minus-icon">indeterminate_check_box</i>
-              <i class="material-icons item-number__icon" id="plus-icon">add_box</i>
-            </li>
+              <img src="./photo2.png" alt="bag" class="items__item-pic">
+              <li>
+                <h2 class="items__item-name">Levi Shoes</h2>
+                <h2 class="items__item-price">$74.99 <span>$124.99</span></h2>
+                <!--icons for increasing and decreasing the number of items ordered
+                  *note: these will not work in this project as they requires logic-->
+                <section class="items__item-count">
+                  <i class="material-icons item-number__icon" id="minus-icon">minimize</i>
+                  <h2 class="items__item-number"></h2>
+                  <i class="material-icons item-number__icon" id="plus-icon">add</i>
+                </section>
+              </li>
           </li>
       </ul>
         <!--container with shipping and total values-->

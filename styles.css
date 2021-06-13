@@ -1,0 +1,132 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+/*Remove default margins,padding & set box-sizing*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*font used most in layout for ALL elements*/
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  max-width: 1440px;
+  min-width: 375px;
+  max-height: 1351px;
+  margin: 0 auto;
+}
+
+.page {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  padding: 4.5% 17% 1.5%;
+  background-color: #FFF;
+  font-weight: 600;
+  color: #828282;
+}
+
+.header {
+  margin-bottom: 5%;
+}
+
+.header__title {
+  font-size: 2.25em;
+}
+
+.order-form {
+  display: flex;
+}
+
+.order-form__customer-info {
+  width: 100%;
+  margin-right: 112px;
+}
+
+.contact-info {
+  width: 100%;
+  position: relative;
+}
+
+.contact-info__heading, .shipping-info__heading {
+  width: 100%;
+  font-size: 1.15em;
+  padding-bottom: 3%;
+  color: #333333;
+}
+
+.contact-info__sub-heading, .shipping-info__sub-heading {
+  font-size: .75em;
+  color: #4F4F4F;
+}
+
+.contact-info__text, .shipping-info__text {
+  width: 100%;
+  margin: 2% 0 4%;
+  padding: 18px 52px;
+  font-size: 1em;
+  border-radius: 12px;
+  border: 1px solid #828282;
+}
+
+.contact-info__text::placeholder {
+  color: #828282;
+  font-weight: 600;
+}
+
+#email-icon {
+  position: absolute;
+    top: 33%;
+    left: 2%;
+}
+
+#phone-icon {
+  position: absolute;
+    top: 76%;
+    left: 2%;
+}
+
+.shipping-info {
+  position: relative;
+}
+
+.shipping-info__heading {
+  margin-top: 6%;
+}
+
+.shipping-info__text::placeholder {
+  color: #333333;
+  font-weight: 600;
+}
+
+#name-icon {
+  position: absolute;
+  top: 30%;
+  left: 2%;
+}
+
+.address::placeholder {
+  color: #828282;
+  font-weight: 600;
+}
+
+#address-icon {
+  position: absolute;
+  top: 75%;
+  left: 2%;
+}
+.order-form__shopping-cart {
+  width: 50%;
+  background: #F2F2F2;
+  padding: 3%;
+}
+
+.items__item-pic {
+  width: 134px;
+}
+
+/*temporary settings to see in the browser*/
+div {
+  border: 1px solid;
+}
