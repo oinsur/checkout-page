@@ -27,12 +27,19 @@
           </h2>
           <!--email input-->
           <label for="email" class="contact-info__sub-heading">E-mail</label>
-          <input type="email" class="contact-info__text" placeholder="Enter your email...">
-          <i class="material-icons contact-info__icon" id="email-icon">email</i>
+          <!-- <input type="email" class="contact-info__text" placeholder="Enter your email...">
+          <i class="material-icons contact-info__icon" id="email-icon">email</i> -->
+          <section class="contact-info__section">
+            <i class="material-icons contact-info__icon" id="email-icon">email</i>
+            <input type="email" class="contact-info__text" placeholder="Enter your email...">
+          </section> 
+          
           <!--phone input-->
           <label for="phone" class="contact-info__sub-heading">phone</label>
-          <input type="phone" class="contact-info__text" placeholder="Enter your phone...">
-          <i class="material-icons contact-info__icon" id="phone-icon">phone</i>
+          <section class="contact-info__section">
+            <i class="material-icons contact-info__icon" id="phone-icon">phone</i>
+            <input type="phone" class="contact-info__text" placeholder="Enter your phone...">
+          </section>
         </section>
         <section class="shipping-info">
           <h2 class="shipping-info__heading">
@@ -40,31 +47,56 @@
           </h2>
           <!--name input-->
           <label for="name" class="shipping-info__sub-heading">Full name</label>
-          <input type="text" class="shipping-info__text" placeholder="Rodney Cotton">
-          <i class="material-icons shipping-info__icon" id="name-icon">account_circle</i>
+          <section class="shipping-info__section">
+            <i class="material-icons shipping-info__icon" id="name-icon">account_circle</i>
+            <input type="text" class="shipping-info__text" placeholder="Rodney Cotton">
+          </section>
+          
           <!--address input-->
           <label for="address" class="shipping-info__sub-heading">Address</label>
-          <input type="text" class="shipping-info__text address" placeholder="Your address...">
-          <i class="material-icons shipping-info__icon" id="address-icon">location_city</i>
+          <section class="shipping-info__section">
+            <i class="material-icons shipping-info__icon" id="address-icon">home</i>
+            <input type="text" class="shipping-info__text address" placeholder="Your address..">
+          </section> 
+        </section>
+
+          <!--address input-->
+          <label for="City" class="shipping-info__sub-heading">City</label>
+          <section class="shipping-info__section">
+            <i class="material-icons shipping-info__icon" id="city-icon">location_city</i>
+            <input type="text" class="shipping-info__text address" placeholder="Your city..">
+          </section> 
         </section>
         <section class="country-info">
           <!--country input-->
-          <label for="country" class="country-info__sub-heading">Country</label>
-          <input list="countries" name="countries" placeholder="Your country..">
-          <datalist id="countries">
-            <option value="USA">
-            <option value="Mexico">
-            <option value="Canada">
-          </datalist>
-          <i class="material-icons country-info__icon" id="country-icon">public</i>
-          <!--address input-->
-          <label for="postal code" class="country-info__sub-heading">Postal code</label>
-          <input type="text" class="country-info__text" placeholder="Your postal code..">
-          <i class="material-icons country-info__icon" id="postal-icon">markunread_mailbox</i>
-          <input type="checkbox">
-          <p class="country-info__save-text">Save this information for next time</p>
-          <button type="button" onclick="">Countinue</button>
+          <div class="country-info__container">
+            <label for="country" class="country-info__sub-heading">Country</label>
+            <section class="country-info__section">
+              <i class="material-icons country-info__icon" id="country-icon">public</i>
+              <!-- <input list="countries" class="country-info__text" name="countries" placeholder="Your country.."> -->
+              <select id="countries" required>
+                <option value="" hidden>Your country..</option>
+                <option value="USA">USA</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Canada">Canada</option>
+                </select>
+            </section>
+          </div>
+          
+          <!--postal code input-->
+          <div class="country-info__container">
+            <label for="postal code" class="country-info__sub-heading">Postal code</label>
+            <section class="country-info__section">
+              <i class="material-icons country-info__icon" id="postal-icon">markunread_mailbox</i>
+              <input type="text" class="country-info__text" placeholder="Your postal code..">
+            </section>
+          </div>
         </section>
+        <section class="save-info">
+          <input type="checkbox" class="save-info__checkbox">
+          <p class="country-info__save-text">Save this information for next time</p>
+        </section>
+        <button type="button" class="order-form__button" onclick="">Countinue</button>
       </div>
       <!--part of the form that has the shopping cart-->
       <div class="order-form__shopping-cart">
