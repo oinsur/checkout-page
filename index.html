@@ -12,13 +12,13 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <div class="page">
+  <div class="page blur">
     <!--Header section with title and description-->
     <header class="header">
       <h1 class="header__title">Checkout</h1>
     </header>
     <!--When the form is "submitted" successfully, it will show a successful submission page -->
-    <form action="submitted.html" method="GET" class="order-form">
+    <form action="#" class="order-form">
       <!--part of the form with the customer info-->
       <div class="order-form__customer-info">
         <section class="contact-info">
@@ -31,14 +31,14 @@
           <i class="material-icons contact-info__icon" id="email-icon">email</i> -->
           <section class="contact-info__section">
             <i class="material-icons contact-info__icon" id="email-icon">email</i>
-            <input type="email" class="contact-info__text" placeholder="Enter your email...">
+            <input type="email" class="contact-info__text" placeholder="Enter your email..." required>
           </section> 
           
           <!--phone input-->
           <label for="phone" class="contact-info__sub-heading">phone</label>
           <section class="contact-info__section">
             <i class="material-icons contact-info__icon" id="phone-icon">phone</i>
-            <input type="phone" class="contact-info__text" placeholder="Enter your phone...">
+            <input type="phone" class="contact-info__text" placeholder="Enter your phone..." required>
           </section>
         </section>
         <section class="shipping-info">
@@ -49,14 +49,14 @@
           <label for="name" class="shipping-info__sub-heading">Full name</label>
           <section class="shipping-info__section">
             <i class="material-icons shipping-info__icon" id="name-icon">account_circle</i>
-            <input type="text" class="shipping-info__text" placeholder="Your name...">
+            <input type="text" class="shipping-info__text" placeholder="Your name..." required>
           </section>
           
           <!--address input-->
           <label for="address" class="shipping-info__sub-heading">Address</label>
           <section class="shipping-info__section">
             <i class="material-icons shipping-info__icon" id="address-icon">home</i>
-            <input type="text" class="shipping-info__text address" placeholder="Your address..">
+            <input type="text" class="shipping-info__text address" placeholder="Your address.." required>
           </section> 
         </section>
 
@@ -64,7 +64,7 @@
           <label for="City" class="shipping-info__sub-heading">City</label>
           <section class="shipping-info__section">
             <i class="material-icons shipping-info__icon" id="city-icon">location_city</i>
-            <input type="text" class="shipping-info__text address" placeholder="Your city..">
+            <input type="text" class="shipping-info__text address" placeholder="Your city.." required>
           </section> 
         </section>
         <section class="country-info">
@@ -73,13 +73,13 @@
             <label for="country" class="country-info__sub-heading">Country</label>
             <section class="country-info__section">
               <i class="material-icons country-info__icon" id="country-icon">public</i>
-              <!-- <input list="countries" class="country-info__text" name="countries" placeholder="Your country.."> -->
+              <div class="countries-button"></div>
               <select id="countries" required>
                 <option value="" hidden>Your country..</option>
                 <option value="USA">USA</option>
                 <option value="Mexico">Mexico</option>
                 <option value="Canada">Canada</option>
-                </select>
+              </select>
             </section>
           </div>
           
@@ -88,7 +88,7 @@
             <label for="postal code" class="country-info__sub-heading">Postal code</label>
             <section class="country-info__section">
               <i class="material-icons country-info__icon" id="postal-icon">markunread_mailbox</i>
-              <input type="text" class="country-info__text" placeholder="Your postal code..">
+              <input type="text" class="country-info__text" placeholder="Your postal code.." required>
             </section>
           </div>
         </section>
@@ -96,7 +96,7 @@
           <input type="checkbox" class="save-info__checkbox">
           <p class="country-info__save-text">Save this information for next time</p>
         </section>
-        <button type="button" class="order-form__button" onclick="">Countinue</button>
+        <button type="button" class="order-form__button">Countinue</button>
       </div>
       <!--part of the form that has the shopping cart-->
       <div class="order-form__shopping-cart">
