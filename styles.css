@@ -133,11 +133,6 @@ body {
   width: 46%;
 }
 
-/* 
-.country-info__section {
-  margin: 0 5% 0;
-} */
-
 /*Save info checkbox styles*/
 .save-info {
   display: flex;
@@ -338,10 +333,7 @@ body {
   .contact-info__section, .shipping-info__section, .country-info__section {
     padding: .25em;
   }
-  #email-icon, #phone-icon {
-    margin-right: 3%;
-  }
-  #name-icon, #address-icon, #city-icon, #country-icon, #postal-icon {
+  #email-icon, #phone-icon, #name-icon, #address-icon, #city-icon, #country-icon, #postal-icon {
     margin-right: 3%;
   }
   .order-form__shopping-cart, .order-form__customer-info {
@@ -354,7 +346,7 @@ body {
     margin-left: 4%;
   } 
   .items__item-name, .items__item-price {
-    font-size: .7em;
+    font-size: .75em;
   }
 }
 
@@ -366,7 +358,7 @@ body {
     margin-left: 5%;
   } 
   .items__item-name, .items__item-price {
-    font-size: .85em;
+    font-size: .875em;
   }
 }
 
@@ -381,17 +373,3 @@ body {
     font-size: 1em;
   }  
 }
-
-
-
-
-
-
-
-div {
-  border: 1px solid;
-}
-
-
-
-/*===============styles to check===============*/
