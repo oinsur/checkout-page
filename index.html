@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <div class="page blur">
+  <div class="page">
     <!--Header section with title and description-->
     <header class="header">
       <h1 class="header__title">Checkout</h1>
@@ -31,15 +31,17 @@
           <i class="material-icons contact-info__icon" id="email-icon">email</i> -->
           <section class="contact-info__section">
             <i class="material-icons contact-info__icon" id="email-icon">email</i>
-            <input type="email" class="contact-info__text" placeholder="Enter your email..." required>
+            <input type="email" class="contact-info__text" id="email" placeholder="Enter your email..." required>
           </section> 
+          <p class="error-text">Please enter a valid email</p>
           
           <!--phone input-->
           <label for="phone" class="contact-info__sub-heading">phone</label>
           <section class="contact-info__section">
             <i class="material-icons contact-info__icon" id="phone-icon">phone</i>
-            <input type="phone" class="contact-info__text" placeholder="Enter your phone..." required>
+            <input type="phone" class="contact-info__text" id="phone" placeholder="Enter your phone..." required>
           </section>
+          <p class="error-text">Please enter a phone number</p>
         </section>
         <section class="shipping-info">
           <h2 class="shipping-info__heading">
@@ -49,23 +51,26 @@
           <label for="name" class="shipping-info__sub-heading">Full name</label>
           <section class="shipping-info__section">
             <i class="material-icons shipping-info__icon" id="name-icon">account_circle</i>
-            <input type="text" class="shipping-info__text" placeholder="Your name..." required>
+            <input type="text" class="shipping-info__text" id="name" placeholder="Your name..." required>
           </section>
+          <p class="error-text">Please enter a name</p>
           
           <!--address input-->
           <label for="address" class="shipping-info__sub-heading">Address</label>
           <section class="shipping-info__section">
             <i class="material-icons shipping-info__icon" id="address-icon">home</i>
-            <input type="text" class="shipping-info__text address" placeholder="Your address.." required>
+            <input type="text" class="shipping-info__text address" id="address" placeholder="Your address.." required>
           </section> 
+          <p class="error-text">Please enter an address</p>
         </section>
 
           <!--address input-->
           <label for="City" class="shipping-info__sub-heading">City</label>
           <section class="shipping-info__section">
             <i class="material-icons shipping-info__icon" id="city-icon">location_city</i>
-            <input type="text" class="shipping-info__text address" placeholder="Your city.." required>
+            <input type="text" class="shipping-info__text address" id="city" placeholder="Your city.." required>
           </section> 
+          <p class="error-text">Please enter a city</p>
         </section>
         <section class="country-info">
           <!--country input-->
@@ -81,6 +86,7 @@
                 <option value="Canada">Canada</option>
               </select>
             </section>
+            <p class="error-text">Please enter a country</p>
           </div>
           
           <!--postal code input-->
@@ -88,8 +94,9 @@
             <label for="postal code" class="country-info__sub-heading">Postal code</label>
             <section class="country-info__section">
               <i class="material-icons country-info__icon" id="postal-icon">markunread_mailbox</i>
-              <input type="text" class="country-info__text" placeholder="Your postal code.." required>
+              <input type="text" class="country-info__text" id="postal-code" placeholder="Your postal code.." required>
             </section>
+            <p class="error-text">Please enter a postal code</p>
           </div>
         </section>
         <section class="save-info">
@@ -110,9 +117,9 @@
               <!--container to increase the number of items with icons working as buttons and a number that will
               increase, but never go below 0. This will be controlled by JavaScript-->
               <section class="items__item-count">
-                <i class="material-icons" id="minus-icon">remove</i>
+                <i class="material-icons" id="minus-icon1">remove</i>
                 <h2 class="items__item-number">1</h2>
-                <i class="material-icons" id="plus-icon">add</i>
+                <i class="material-icons" id="plus-icon1">add</i>
               </section>
             </section>
           </div>
@@ -125,9 +132,9 @@
                 <!--icons for increasing and decreasing the number of items ordered
                   *note: these will not work in this project as they requires logic-->
                 <section class="items__item-count">
-                  <i class="material-icons" id="minus-icon">remove</i>
+                  <i class="material-icons" id="minus-icon2">remove</i>
                   <h2 class="items__item-number">1</h2>
-                  <i class="material-icons" id="plus-icon">add</i>
+                  <i class="material-icons" id="plus-icon2">add</i>
                 </section>
               </section>
             </div>
@@ -147,5 +154,11 @@
       created by <span>oinsur</span> - devChallenges.io
     </footer>
   </div>
+  <!--Pop up-->
+  <div class="modal" id="modal">
+    <i class="material-icons" id="close">close</i>
+    <h2>Thank you for your submission</h2>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

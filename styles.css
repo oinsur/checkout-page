@@ -90,6 +90,7 @@ body {
   font-size: .75em;
   color: #828282;
   border: none;
+  outline: none;
 }
 
 
@@ -248,7 +249,7 @@ body {
 }
 
 /*quantity buttons*/
-#minus-icon, #plus-icon {
+#minus-icon1, #plus-icon1, #minus-icon2, #plus-icon2 {
   background-color: #E0E0E0;
   font-size: 1.25em;
   padding: 2%;
@@ -305,6 +306,59 @@ body {
   justify-content: center;
 }
 
+/*===============Form error styles===============*/
+.error-text {
+  color: red;
+  font-size: .625em;
+  display: none;
+}
+
+.error-input {
+  border: 2px solid red;
+}
+
+/*===============pop up===============*/
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00000075;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal h2 {
+  background-color: white;
+  text-align: center;
+  padding: 4%;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px;
+}
+
+#close {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+#close:hover {
+  transform: rotate(180deg) scale(1.05);
+}
+
+/*blur effect on submission*/
+.blur {
+  filter: blur(5px);
+}
+
 /*===============media queries===============*/
 
 @media screen and (min-width: 768px) {
@@ -347,6 +401,9 @@ body {
   } 
   .items__item-name, .items__item-price {
     font-size: .75em;
+  }
+  .error-text {
+    font-size: .875em;
   }
 }
 
